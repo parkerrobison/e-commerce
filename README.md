@@ -31,6 +31,14 @@
   8) Seed the database by typing 'npm run seed' in the command line. 
   9) Run the program by typing in 'npm start' 
   10) Open and use insomnia to test the routes on localhost after connecting to the server.
+  
+  ## Walkthrough
+  Link for the video walkthrough: https://drive.google.com/file/d/1H6lj8uEOpxTxory6KFnWAMiyLqS0md4j/view
+  
+  ## Examples of POST requests
+  ![category-example](./images/cat_example.JPG)
+  ![product-example](./images/product_example.JPG)
+  ![tag-example](./images/tag_example.JPG)
    
   ## License
 
@@ -38,6 +46,9 @@
 
   ## Questions
   If you run into any errors or have further questions about this program, you can contact here: 
-  *github: https://github.com/parkerrobison 
-  *email: parkerobison@gmail.com.
+  
+  github: https://github.com/parkerrobison 
+  
+  email: parkerobison@gmail.com.
+  
   Please reference the project in question in the message. Thank you.

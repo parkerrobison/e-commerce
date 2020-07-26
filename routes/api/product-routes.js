@@ -22,7 +22,8 @@ router.get('/', (req, res) => {
           attributes: ['id', 'tag_name']
         }
       ]
-    }).then(dbProductData => res.json(dbProductData))
+    })
+    .then(dbProductData => res.json(dbProductData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -58,7 +59,7 @@ router.get('/:id', (req, res) => {
     })
     .catch(err => {
       console.log(err);
-      res.status(500), json(err)
+      res.status(500).json(err)
     });
 });
 
@@ -72,19 +73,8 @@ router.post('/', (req, res) => {
       tagIds: [1, 2, 3, 4]
     }
   */
-
-  //  Product.create({
-  //   product_name: req.body.product_name,
-  //   price: req.body.price,
-  //   stock: req.body.stock,
-  //   tagIds: req.body.tag_id
-  // })
-  // .then(dbProductData => res.json(dbProductData))
-  // .catch(err => {
-  //   console.log(err);
-  //   res.status(500).json(err);
-  // }) 
   Product.create(req.body)
+
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
       if (req.body.tagIds.length) {
@@ -157,7 +147,7 @@ router.put('/:id', (req, res) => {
     })
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
-      // console.log(err);
+      console.log(err);
       res.status(400).json(err);
     });
 });
